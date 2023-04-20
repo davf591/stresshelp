@@ -1,0 +1,38 @@
+ <h1>Your Appointments</h1>
+{{#if appointments}}
+  <table  class="striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each appointments}}
+        <tr>
+          <td>{{this.title}}</td>
+          <td>{{this.description}}</td>
+          <td>{{this.appointmentDate}}</td>
+          <td>
+                <a href="/appointments/edit/{{_id}}" class="btn btn-float">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <form id="delete-form" action="/appointments/{{_id}}?_method=DELETE" method="POST">
+                    <button type="submit" class="btn red">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+
+            </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p>No appointments found</p>
+{{/if}}
+
+
+<a href="/dashboard">
+Go to Dashboard</a>

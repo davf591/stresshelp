@@ -1,0 +1,162 @@
+p {
+  margin: 10px 0 !important;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin: 0px;
+}
+
+* {
+box-sizing: border-box;
+
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.login-container {
+  max-width: 1270px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+
+.fa-small {
+  font-size: 16px !important;
+}
+
+.btn-float {
+  float: left;
+  margin-right: 10px;
+}
+
+.img-small {
+  width: 180px;
+}
+
+.fa-large {
+  font-size: 26px !important;
+}
+
+.input-group{
+  display:table;
+  width:100%;
+}
+.input-group .input-field,
+.input-group .input-group-addon{
+  display:table-cell;
+}
+
+.search-form {
+  margin: 70px 0;
+}
+.fs-70 {
+  font-size: 70px;
+}
+.d-flex{
+  display: flex;
+}
+.w-18{
+  width: 18rem;
+}
+.w-50{
+  width: 50rem;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.text-center {
+  text-align: center;
+}
+.p-10{
+  padding: 10px;
+}
+
+.well {
+  width: 100%;
+  content:"";
+  z-index:-1;
+}
+
+.well-header {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: helvetica Neue;
+  color: #1E2749;
+
+}
+
+.blg-content p {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+
+
+
+#disabledSelect{
+  height: 30px;
+}
+/*
+.form-control {
+    height: 30px;
+}
+*/
+.form-group1 {
+  padding-bottom: 45px;
+  height: 5px;
+}
+
+
+
+#disabledSelect{
+  padding-bottom: 25px;
+}
+
+.input-group-addon,.fa> fa-calendar {
+  color: #FFE071;
+  background: #1E2749;
+  border: solid 1px #1E2749;
+}
+
+p, label, checkbox {
+  font-size: 1em;
+  /*font-weight: bold;*/
+  color: #1E2749;
+
+}
+
+.header_p {
+  font-size: 1.1em;
+}
+
+.button{
+  color: rgba(198, 156, 0, 1);
+  background: #1E2749;
+  border: solid 1px #1E2749;
+;
+}
+footer {
+  margin-right: 30px; 
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+.logout {
+  margin: 10px;
+}
+elp-block {
+  color: #1E2749;
+}
+nav {
+  position: relative;
+  height: 100px;
+}
+a.sidenav-trigger {
+  margin-left: 0;
+}
+
+

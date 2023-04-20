@@ -1,0 +1,72 @@
+<h6>Homepage</h6>
+<h3>Welcome</h3>
+<p>How is your mood today</p>
+<div class="d-flex">
+    <div class="card w-18">
+        <div class="card-body p-10">
+            <h4 class="card-title text-center"><b>Profile</b></h4>
+            <p class="card-text">
+                <b>Name:</b> {{obj.name}} <br>
+                <b>Email:</b> {{obj.email}} <br>
+                <b>Gender:</b> {{obj.gender}} <br>
+                <b>Age:</b> {{obj.age}} <br>
+                <b>Occupation:</b> {{obj.occupation}} <br>
+                <b>Hobbies:</b> {{obj.hobbies}} <br>
+                <b>Health Issues:</b> {{obj.health_issues}} <br>
+            </p>
+        </div>
+    </div>
+    <div class="card w-50 ml-10">
+        <div class="card-body text-center p-10">
+            <h4 class="card-title">Hi !</h4>
+            <h6 class="card-subtitle mb-2 fs-70">&#128532;</h6>
+            <h6 class="card-subtitle mb-2 fs-70">&#128512;</h6>
+            <p class="card-text">Stress Level High</p>
+            <button class="btn-large">
+                Please take a breath slowly
+            </button>
+            <br> <br>
+            <button class="btn-large">
+              Maybe go for walk
+            </button>
+        </div>
+    </div>
+
+</div>
+
+{{#if stories}}
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each stories}}
+        <tr>
+            <td><a href="/stories/{{_id}}">{{title}}</a></td>
+            <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+            <td><span class="dash-status">{{status}}</span></td>
+            <td>
+                <a href="/stories/edit/{{_id}}" class="btn btn-float">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <form id="delete-form" action="/stories/{{_id}}?_method=DELETE" method="POST">
+                    <button type="submit" class="btn red">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>You have not created any stories</p>
+{{/if}}
+<script id="template" type="text/x-handlebars-template">
+</script>

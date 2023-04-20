@@ -1,0 +1,32 @@
+<h3>Edit Appointment</h3>
+<div class="row">
+    <form action="/appointments/{{appointment._id}}?_method=PUT" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title" name="title" value="{{appointment.title}}">
+                <label for="title">Title</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="date" name="date" value="{{appointment.appointmentDate}}">
+                <label for="date">Date (YYYY-MM-DD)</label>
+            </div>
+        </div>
+
+        
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Description:</h5>
+                <textarea id="description" name="description">{{appointment.description}}</textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book an appointment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="section">
+        <div class="well">
+            <div class="well-header">BOOK ONLINE</div>
+            <br>
+            {{#if successMessage}}
+            <div class="alert alert-success">
+                <strong>Success!</strong> {{successMessage}}
+            </div>
+            {{/if}}
+            {{#if errorMessage}}
+            <div class="alert alert-danger">
+                <strong>Error!</strong> {{errorMessage}}
+            </div>
+            {{/if}}
+            <form action="/save-appointment" method="POST">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title"
+                           placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" name="description"
+                           placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <label for="appointmentDate">Appointment Date</label>
+                    <input type="datetime-local" id="datetime" name="appointmentDate">
+
+                </div>
+
+                <button type="submit" class="btn">Submit</button>
+
+            </form>
+        </div>
+    </div>
+    <a href="/dashboard">
+        Go to Dashboard
+    </a>
+
+</div>
+
+</body>
+</html>
+
